@@ -1,0 +1,117 @@
+#include <cmath>
+#include <cstdio>
+#include<cstring>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+ void show(int x,char seat[][4])
+    {
+        for(int i=0;i<=x;i++)
+        {
+            for(int j=0;j<4;j++)
+            {
+                cout<<seat[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+    }
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+  //  int n;
+    char k,l;
+  //  string s,f;
+ //   getline(cin,s);
+ //   getline(cin,f);
+//    cout<<s<<" "<<f;
+//    cin>>n;
+    int r=7;
+    char seat[r][4];
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<4;j++)
+        {
+            if(j==0)
+            {
+                seat[i][j]='A';
+            }
+            if(j==1)
+            {
+                seat[i][j]='B';
+            }
+            if(j==2)
+            {
+                seat[i][j]='C';
+            }
+            if(j==3)
+            {
+                seat[i][j]='D';
+            }
+        }
+    }
+   /* for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<4;j++)
+        {
+            cout<<seat[i][j]<<" ";
+        }
+        cout<<endl;
+    }*/
+ 
+     int n1;
+    for(int w=0;w<2;w++)
+    {
+        cin>>k;
+        cin>>l;
+        n1=(int)k-49;
+    //    cout<<n1<<endl;;
+  //      cout<<l<<" "<<k;
+   //     break;
+        if(n1<0)
+        {
+            break;
+        }
+        if(l=='A')
+        {
+            if(seat[n1][0]=='X')
+                continue;          
+            seat[n1][0]='X';
+      //      show(n1,seat);
+     //       break;
+        }
+        if(l=='B')
+           {
+            if(seat[n1][1]=='X')
+                continue;            
+            seat[n1][1]='X';
+       //     show(n1,seat);
+       //     break;
+        }
+        if(l=='C')
+         {
+            if(seat[n1][2]=='X')
+                continue;            
+            seat[n1][2]='X';
+    //        show(n1,seat);
+    //        break;
+        }
+        if(l=='D')
+          {
+            if(seat[n1][3]=='X')
+                continue;            
+            seat[n1][3]='X';
+     //       show(n1,seat);
+     //       break;
+        }
+       /* else{
+            cout<<"Enter valid seat no."<<endl;
+        }*/
+    }
+    seat[1][1]='X';
+    show(n1,seat);
+  // cout<<seat[2][1];
+    return 0;
+}

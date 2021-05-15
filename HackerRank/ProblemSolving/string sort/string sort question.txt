@@ -1,0 +1,16 @@
+To sort N names in alphabetical order.
+
+Input Format
+
+bumrah
+rahane
+rahul
+vijay
+virat
+Constraints
+
+0<=n<=100
+
+Output Format
+
+bumrah rahane rahul vijay virat

@@ -1,0 +1,64 @@
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* l3,*t1,*t2,*t3;
+        l3=NULL;
+        int carry=0,x,y;
+        t1=l1;
+        t2=l2;
+        while(t1!=NULL || t2!=NULL )
+        {
+            if(l3==NULL)
+            {
+                ListNode* node=new ListNode;
+                if(node==NULL)
+                    return 0;
+                l3=node;
+                t3=l3;
+            }
+            else{
+                    ListNode* node=new ListNode;
+                    if(node==NULL)
+                         return 0;
+                    t3->next=node;
+                    t3=t3->next;
+                }
+            if(t1==NULL)
+            {
+                x=0;
+            }
+            else{
+                x=t1->val;
+                t1=t1->next;
+            }
+             if(t2==NULL)
+            {
+                y=0;
+            }
+            else{
+                y=t2->val;
+                t2=t2->next;
+            }
+            t3->val=(((x+y)%10)+carry)%10;
+            
+            if(x+y+carry>9)
+                carry=1;
+            else
+                carry=0;
+            
+        }
+        if(carry==1)
+        {
+            ListNode* node=new ListNode;
+                    t3->next=node;
+                    t3=t3->next;
+                    t3->val=1;
+        }
+        return l3;
+    }
+};
+
+
+
+
+//[1] [9,9]  o/p -> [0,0,1]

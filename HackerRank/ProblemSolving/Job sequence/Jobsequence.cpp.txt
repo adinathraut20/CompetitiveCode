@@ -1,0 +1,67 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <bits/stdc++.h> 
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    
+    int arri[6],arrl[6],arrp[6],pro=0,maxd=0;
+  
+    for(int i=0;i<6;i++)
+    {
+        cin>>arri[i]>>arrl[i]>>arrp[i];
+        if(maxd<arrl[i])
+            maxd=arrl[i];
+        
+    }
+     
+    for(int i=0;i<6;i++)
+    {
+        for(int j=0;j<5-i;j++)
+        {
+            if(arrp[j]<arrp[j+1])
+            {
+               int temp=arrp[j];
+                arrp[j]=arrp[j+1];
+                arrp[j+1]=temp;
+                temp=arri[j];
+                arri[j]=arri[j+1];
+                arri[j+1]=temp;
+                temp=arrl[j];
+                arrl[j]=arrl[j+1];
+                arrl[j+1]=temp;            
+            }
+        }   
+    }
+  
+    int seq[maxd], visit[maxd];
+    for(int i=0;i<maxd;i++)
+        visit[i]=-1;
+    
+    for(int i=0;i<maxd;i++)
+    {
+                for(int j=arrl[i]-1;j>=0;j--)
+                {
+                    if(visit[j]==-1)
+                    {
+                        seq[j]=arri[i];
+                        visit[j]=0;
+                        break;
+                    }
+                }
+        
+    }
+      for(int i=0;i<maxd;i++)
+     {
+        cout<<seq[i]<<"  ";
+        pro+=arrp[i];
+        
+     }
+    cout<<endl<<endl;
+    cout<<pro<<endl;
+    return 0;
+}

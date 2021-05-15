@@ -1,0 +1,35 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <map>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    map<string,long int> dic1;
+    int n;
+    cin>>n;
+    string str;
+    for(int i=0;i<n;i++)
+    {
+        cin>>str;
+        cin>>dic1[str];
+    } 
+    while(cin>>str)
+    {
+        
+        if (auto res = dic1.find(str); res != dic1.end())
+        {
+            cout <<str<< "=" << res->second <<endl;
+        } 
+        else {
+                 cout << "Not found" <<endl;
+                }
+    }   
+    
+    return 0;
+}
+

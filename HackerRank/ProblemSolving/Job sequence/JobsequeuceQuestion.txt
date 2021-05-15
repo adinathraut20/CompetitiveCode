@@ -1,0 +1,29 @@
+Given an array of jobs where every job has a deadline and a profit. Profit can be earned only if the job is finished before the deadline. It is also given that every job takes a single unit of time, so the minimum possible deadline for any job is 1. How to maximize total profit if only one job can be scheduled at a time. Print the sequence of jobID order to maximize total profit.
+
+Input Format
+
+JobID, Deadline, Profit
+
+Constraints
+
+1<=JobID>=6
+
+Output Format
+
+Job sequence: ?
+
+Profit : ?
+
+Sample Input 0
+
+1    4    30
+2    2    20
+3    2    60
+4    2    30
+5    1    10
+6    4    80
+Sample Output 0
+
+4  3  1  6
+
+200

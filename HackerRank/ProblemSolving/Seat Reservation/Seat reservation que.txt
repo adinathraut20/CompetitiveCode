@@ -1,0 +1,116 @@
+Write a program to assign passengers seats in an airplane. Assume a small airplane with seat numbering as follows: 1 A B C D 2 A B C D 3 A B C D 4 A B C D 5 A B C D 6 A B C D 7 A B C D The program should display the seat pattern, with an ‘X’ marking the seats already assigned. After displaying the seats available, the program prompts the seat desired, the user types in a seat, and then the display of available seats is updated. This continues until all seats are filled or until the user signals that the program should end. If the user types in a seat that is already assigned, the program should say that the seat is occupied and ask for another choice.
+
+Input Format
+
+For example, after seats 1A, 2B, and 4C are taken, the display should look like:
+
+1 X B C D
+
+2 A X C D
+
+3 A B C D
+
+4 A B X D
+
+5 A B C D
+
+6 A B C D
+
+7 A B C D
+Constraints
+
+n>0
+
+Output Format
+
+initial seat arrangements........
+
+1 A B C D
+
+2 A B C D
+
+3 A B C D
+
+4 A B C D
+
+5 A B C D
+
+6 A B C D
+
+7 A B C D
+
+enter N if you are done!
+
+enter valid seat no to check(like 1B) or N to end: 2B congrats, your seat is valid. Reserved for you
+updated seat status..........
+
+1 A B C D
+
+2 A X C D
+
+3 A B C D
+
+4 A B C D
+
+5 A B C D
+
+6 A B C D
+
+7 A B C D
+
+enter valid seat no to check(like 1B) or N to end: 3C congrats, your seat is valid. Reserved for you
+updated seat status..........
+
+1 A B C D
+
+2 A X C D
+
+3 A B X D
+
+4 A B C D
+
+5 A B C D
+
+6 A B C D
+
+7 A B C D
+
+enter valid seat no to check(like 1B) or N to end: 2B Seat is already occupied
+
+enter valid seat no to check(like 1B) or N to end: 7E invalid seat no
+
+enter valid seat no to check(like 1B) or N to end: 7C congrats, your seat is valid. Reserved for you
+updated seat status..........
+
+1 A B C D
+
+2 A X C D
+
+3 A B X D
+
+4 A B C D
+
+5 A B C D
+
+6 A B C D
+
+7 A B X D
+
+enter valid seat no to check(like 1B) or N to end: N
+Thanks, that's all
+
+Sample Input 0
+
+2B
+Sample Output 0
+
+A B C D
+A X C D
+Sample Input 1
+
+3C
+Sample Output 1
+
+A B C D
+A X C D
+A B X D

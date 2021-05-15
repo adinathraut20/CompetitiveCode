@@ -1,0 +1,13 @@
+Given a binary string, write an algorithm to find the number of patterns of form 1[0]1 where [0] represents any number of zeroes (minimum requirement is one 0) there should not be any other character except 0 in the [0] sequence.
+
+Input Format
+
+Binary input
+
+Constraints
+
+0<=n<=1
+
+Output Format
+
+Count of given pattern
